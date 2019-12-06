@@ -1,0 +1,11 @@
+[
+  [
+    "datamart-job-executor",
+    "datamart-store-node",
+    "datamart-internal-job-executor"
+  ],
+  [
+    "core-api",
+    "core-datamart-front"
+  ]
+]
