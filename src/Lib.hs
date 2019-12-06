@@ -48,7 +48,7 @@ findTasksOrderHelper todo done g =
         case todo of [] -> done
                      (hd:_) -> let next = find (areDependenciesDone done g) todo in
                          case next of Just a -> findTasksOrderHelper (delete a todo) (done++[a]) g
-                                      Nothing -> error "Impossible to find next step (maybe there is a cycle in the graph?)"
+                                      Nothing -> error "Impossible to find a schedule (maybe there is a cycle in the graph?)"
 
 findTasksOrder :: Eq a => [a] -> Graph a -> [a]
 findTasksOrder todo g = findTasksOrderHelper todo [] g
